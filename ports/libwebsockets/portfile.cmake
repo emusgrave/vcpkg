@@ -6,7 +6,7 @@ vcpkg_from_github(
     HEAD_REF master
     PATCHES
         fix-dependency-libuv.patch
-        fix-build-error.patch
+        # fix-build-error.patch
         export-include-path.patch
         fix-find-openssl.patch
 )
