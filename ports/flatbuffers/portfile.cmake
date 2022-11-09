@@ -7,8 +7,6 @@ vcpkg_from_github(
     SHA512 715B682AD960B62D5DAEBE8B23998227D4DA766F828E9C31551AB27EBE60EFDF5AD46935D5D8ACDE707464292FFA3258E06AE31AEA6B7CAE22DF196DBBD997A1
     HEAD_REF master
     PATCHES
-        ignore_use_of_cmake_toolchain_file.patch
-        no-werror.patch
         fix-uwp-build.patch
 )
 
@@ -45,6 +43,7 @@ else()
 endif()
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/bin" "${CURRENT_PACKAGES_DIR}/debug/bin")
 
 # Handle copyright
