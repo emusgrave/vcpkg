@@ -7,8 +7,8 @@ vcpkg_from_github(
     PATCHES
         fix-dependency-libuv.patch
         # fix-build-error.patch
-        export-include-path.patch
-        fix-find-openssl.patch
+        # export-include-path.patch
+        # fix-find-openssl.patch
 )
 
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "static" LWS_WITH_STATIC)
